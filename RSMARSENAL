@@ -1,0 +1,119 @@
+-- RSM Arsenal Hub by Ukrainian_nationalist and SkullzReborn
+
+-- Create the GUI
+local ScreenGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local AimbotToggle = Instance.new("TextButton")
+local InfiniteAmmoToggle = Instance.new("TextButton")
+local RapidFireToggle = Instance.new("TextButton")
+local GodModeToggle = Instance.new("TextButton")
+
+-- GUI Settings
+ScreenGui.Name = "RSM Arsenal Hub"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = ScreenGui
+MainFrame.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+MainFrame.Position = UDim2.new(0.4, 0, 0.4, 0)
+MainFrame.Size = UDim2.new(0, 200, 0, 200)
+
+Title.Name = "Title"
+Title.Parent = MainFrame
+Title.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+Title.Size = UDim2.new(1, 0, 0, 30)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "RSM Arsenal Hub"
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.TextSize = 16
+
+AimbotToggle.Name = "AimbotToggle"
+AimbotToggle.Parent = MainFrame
+AimbotToggle.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+AimbotToggle.Position = UDim2.new(0, 20, 0, 60)
+AimbotToggle.Size = UDim2.new(0, 160, 0, 30)
+AimbotToggle.Font = Enum.Font.SourceSansBold
+AimbotToggle.Text = "Aimbot: OFF"
+AimbotToggle.TextColor3 = Color3.new(1, 1, 1)
+AimbotToggle.TextSize = 14
+
+InfiniteAmmoToggle.Name = "InfiniteAmmoToggle"
+InfiniteAmmoToggle.Parent = MainFrame
+InfiniteAmmoToggle.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+InfiniteAmmoToggle.Position = UDim2.new(0, 20, 0, 100)
+InfiniteAmmoToggle.Size = UDim2.new(0, 160, 0, 30)
+InfiniteAmmoToggle.Font = Enum.Font.SourceSansBold
+InfiniteAmmoToggle.Text = "Infinite Ammo: OFF"
+InfiniteAmmoToggle.TextColor3 = Color3.new(1, 1, 1)
+InfiniteAmmoToggle.TextSize = 14
+
+RapidFireToggle.Name = "RapidFireToggle"
+RapidFireToggle.Parent = MainFrame
+RapidFireToggle.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+RapidFireToggle.Position = UDim2.new(0, 20, 0, 140)
+RapidFireToggle.Size = UDim2.new(0, 160, 0, 30)
+RapidFireToggle.Font = Enum.Font.SourceSansBold
+RapidFireToggle.Text = "Rapid Fire: OFF"
+RapidFireToggle.TextColor3 = Color3.new(1, 1, 1)
+RapidFireToggle.TextSize = 14
+
+GodModeToggle.Name = "GodModeToggle"
+GodModeToggle.Parent = MainFrame
+GodModeToggle.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+GodModeToggle.Position = UDim2.new(0, 20, 0, 180)
+GodModeToggle.Size = UDim2.new(0, 160, 0, 30)
+GodModeToggle.Font = Enum.Font.SourceSansBold
+GodModeToggle.Text = "God Mode: OFF"
+GodModeToggle.TextColor3 = Color3.new(1, 1, 1)
+GodModeToggle.TextSize = 14
+
+-- Functionality
+local aimbotEnabled = false
+local infiniteAmmoEnabled = false
+local rapidFireEnabled = false
+local godModeEnabled = false
+
+AimbotToggle.MouseButton1Click:Connect(function()
+aimbotEnabled = not aimbotEnabled
+if aimbotEnabled then
+AimbotToggle.Text = "Aimbot: ON"
+-- Implement aimbot logic here
+else
+AimbotToggle.Text = "Aimbot: OFF"
+-- Disable aimbot logic here
+end
+end)
+
+InfiniteAmmoToggle.MouseButton1Click:Connect(function()
+infiniteAmmoEnabled = not infiniteAmmoEnabled
+if infiniteAmmoEnabled then
+InfiniteAmmoToggle.Text = "Infinite Ammo: ON"
+-- Implement infinite ammo logic here
+else
+InfiniteAmmoToggle.Text = "Infinite Ammo: OFF"
+-- Disable infinite ammo logic here
+end
+end)
+
+RapidFireToggle.MouseButton1Click:Connect(function()
+rapidFireEnabled = not rapidFireEnabled
+if rapidFireEnabled then
+RapidFireToggle.Text = "Rapid Fire: ON"
+-- Implement rapid fire logic here
+else
+RapidFireToggle.Text = "Rapid Fire: OFF"
+-- Disable rapid fire logic here
+end
+end)
+
+GodModeToggle.MouseButton1Click:Connect(function()
+godModeEnabled = not godModeEnabled
+if godModeEnabled then
+GodModeToggle.Text = "God Mode: ON"
+-- Implement god mode logic here
+else
+GodModeToggle.Text = "God Mode: OFF"
+-- Disable god mode logic here
+end
+end)
